@@ -45,12 +45,7 @@ const TaskComponent: FC<props> = ({
       <div className="actions" onClick={(event) => event.stopPropagation()}>
         {state !== "TASK_ARCHIVED" && (
           // eslint-disable-next-line jsx-a11y/anchor-is-valid
-          <a
-            // onClick={() => onPinTask(id)}
-            onClick={() =>
-              state !== "TASK_ARCHIVED" && !!onArchiveTask && onArchiveTask(id)
-            }
-          >
+          <a onClick={() => !!onArchiveTask && onArchiveTask(id)}>
             <span className={`icon-star`} />
           </a>
         )}
