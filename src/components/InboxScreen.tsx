@@ -4,6 +4,10 @@ import { pinTask, unPinTask, archive } from "../store/store";
 import { Task } from "../types/task.types";
 import TaskList from "./TaskList";
 import { addTask } from "../store/store";
+import "./inboxScreen.css";
+import srcimg from "../task.webp";
+import allinone from "../allinone.png";
+import ts from "../sb.png";
 
 const InboxScreen = () => {
   const task = useSelector((state: Task[]) => state);
@@ -32,10 +36,22 @@ const InboxScreen = () => {
   };
   return (
     <>
-      add task
+      <div
+        className="
+      header-img
+    "
+      >
+        {" "}
+        <h1 className="head-title">Task List</h1>
+        <br />
+        <img src={allinone} className="allimg" alt="" />
+        <img src={ts} className="sbimg" alt="" />
+        <img className="img" src={srcimg} alt="" />
+      </div>
+
       <p className="text-white">Title</p>
       <input
-        className=""
+        className="add-task-input"
         type="text"
         value={title}
         onChange={(e) => {
@@ -44,11 +60,8 @@ const InboxScreen = () => {
         }}
       />
       {error && <p className="">{error}</p>}
-      <button
-        className="py-1 px-4 focus:outline-none bg-pink-600 text-white rounded my-3"
-        onClick={handleSubmit}
-      >
-        Submit
+      <button className="main-add-btn" onClick={handleSubmit}>
+        Add
       </button>
       <TaskList
         tasks={task as Task[]}

@@ -1,0 +1,20 @@
+.head-title {
+  align-self: center;
+  padding: 15px;
+  margin: 10px;
+  font-weight: 800;
+}
+
+.text-white {
+  padding: 29px;
+  font-weight: 600;
+}
+.main-add-btn {
+  margin: 15px;
+  padding: 17px;
+  background-color: white;
+  font-size: 25px;
+  font-weight: 600;
+  border-radius: 15px;
+  border: 2px solid grey;
+}
