@@ -1,6 +1,6 @@
 import React from "react";
 import TaskComponent from "./TaskComponent";
-import { Task, TaskListprops } from "../types/task.types";
+import { TaskListprops } from "../types/task.types";
 
 const TaskList: React.FC<TaskListprops> = ({
   loading,

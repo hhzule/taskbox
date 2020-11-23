@@ -1,16 +1,20 @@
 import React from "react";
 import TaskList from "./TaskList";
 import * as TaskStories from "./Task.stories";
+import { Meta } from "@storybook/react";
 
+import { TaskListprops } from "../types/task.types";
 export default {
   component: TaskList,
   title: "TaskList",
-  decorators: [(story) => <div style={{ padding: "3rem" }}>{story()}</div>],
-};
+  decorators: [
+    (story: any) => <div style={{ padding: "3rem" }}>{story()}</div>,
+  ],
+} as Meta;
 
-const Template = (args) => <TaskList {...args} />;
+const Template = (args: TaskListprops) => <TaskList {...args} />;
 
-export const Default = Template.bind({});
+const Default: any = Template.bind({});
 Default.args = {
   tasks: [
     { ...TaskStories.Default.args.task, id: "1", title: "Task 1" },
@@ -22,7 +26,7 @@ Default.args = {
   ],
 };
 
-export const WithPinnedTasks = Template.bind({});
+const WithPinnedTasks: any = Template.bind({});
 WithPinnedTasks.args = {
   tasks: [
     ...Default.args.tasks.slice(0, 5),
@@ -30,14 +34,15 @@ WithPinnedTasks.args = {
   ],
 };
 
-export const Loading = Template.bind({});
+const Loading: any = Template.bind({});
 Loading.args = {
   tasks: [],
   loading: true,
 };
 
-export const Empty = Template.bind({});
+const Empty: any = Template.bind({});
 Empty.args = {
   ...Loading.args,
   loading: false,
 };
+export { Default, WithPinnedTasks, Loading, Empty };

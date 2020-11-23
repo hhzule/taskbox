@@ -3,7 +3,7 @@
 // expect(element).toHaveTextContent(/react/i)
 // learn more: https://github.com/testing-library/jest-dom
 import "@testing-library/jest-dom";
-/* eslint-disable import/no-extraneous-dependencies */
-import Enzyme from "./components/node_modules/enzyme";
-import ReactSixteenAdapter from "enzyme-adapter-react-16";
-Enzyme.configure({ adapter: new ReactSixteenAdapter() });
+// /* eslint-disable import/no-extraneous-dependencies */
+// import Enzyme from "./components/node_modules/enzyme";
+// import ReactSixteenAdapter from "enzyme-adapter-react-16";
+// Enzyme.configure({ adapter: new ReactSixteenAdapter() });

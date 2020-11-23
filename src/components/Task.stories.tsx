@@ -1,14 +1,15 @@
 import React from "react";
 import TaskComponent from "./TaskComponent";
+import { Meta } from "@storybook/react";
 
 export default {
   component: TaskComponent,
   title: "Task",
-};
+} as Meta;
 
 const TaskCom = (args: any) => <TaskComponent {...args} />;
 
-export const Default: any = TaskCom.bind({});
+const Default: any = TaskCom.bind({});
 
 Default.args = {
   task: {
@@ -19,7 +20,7 @@ Default.args = {
   },
 };
 
-export const Pinned: any = TaskCom.bind({});
+const Pinned: any = TaskCom.bind({});
 
 Pinned.args = {
   task: {
@@ -28,7 +29,7 @@ Pinned.args = {
   },
 };
 
-export const Archived: any = TaskCom.bind({});
+const Archived: any = TaskCom.bind({});
 
 Archived.args = {
   task: {
@@ -36,3 +37,4 @@ Archived.args = {
     state: "TASK_ARCHIVED",
   },
 };
+export { Default, Pinned, Archived };
