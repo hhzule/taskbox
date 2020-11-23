@@ -31,7 +31,7 @@ const InboxScreen = () => {
       dispatch(addTask({ title }));
       setTitle("");
     } else {
-      setError("Title is required");
+      setError("Oopss! you got to add title");
     }
   };
   return (
@@ -61,7 +61,7 @@ const InboxScreen = () => {
       />
       {error && <p className="">{error}</p>}
       <button className="main-add-btn" onClick={handleSubmit}>
-        Add
+        Add Task
       </button>
       <TaskList
         tasks={task as Task[]}

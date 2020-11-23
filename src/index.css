@@ -813,6 +813,7 @@ a:focus {
   background: white;
   transition: all ease-out 150ms;
   border: 2px solid grey;
+  border-radius: 15px;
 }
 .list-item .title {
   overflow: hidden;
@@ -1008,4 +1009,15 @@ a:focus {
 .icon-star {
   content: url("./archive.webp");
   width: 20px;
+}
+.main-add-btn:hover {
+  color: rgb(0, 0, 0) !important;
+  padding: 15px;
+  border-radius: 20px;
+  transition: 0.5s ease-out;
+}
+.main-add-btn {
+  color: grey;
+  padding: 10px;
+  transition: 0.5s ease-out;
 }
