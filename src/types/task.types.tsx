@@ -16,4 +16,5 @@ export interface TaskListprops {
   onPinTask?: (id: string) => void;
   onArchiveTask?: (id: string) => void;
   onUnPinTask?: (id: string) => void;
+  error?: string;
 }
