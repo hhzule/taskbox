@@ -60,6 +60,7 @@ const InboxScreen = () => {
         }}
       />
       {error && <p className="">{error}</p>}
+      <br />
       <button className="main-add-btn" onClick={handleSubmit}>
         Add Task
       </button>
