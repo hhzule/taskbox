@@ -36,8 +36,8 @@ const TaskList: React.FC<TaskListprops> = ({
     );
   }
   const tasksInOrder = [
-    ...tasks.filter((t) => t.state === "TASK_PINNED"),
-    ...tasks.filter((t) => t.state !== "TASK_PINNED"),
+    ...tasks?.filter((t) => t.state === "TASK_PINNED"),
+    ...tasks?.filter((t) => t.state !== "TASK_PINNED"),
   ];
   return (
     <div className="list-items">

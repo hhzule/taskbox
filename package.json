@@ -12,13 +12,15 @@
     "@types/react": "^16.9.56",
     "@types/react-dom": "^16.9.9",
     "@types/react-redux": "^7.1.11",
-    "react": "^17.0.1",
-    "react-dom": "^17.0.1",
     "react-redux": "^7.2.2",
     "react-scripts": "4.0.0",
     "redux": "^4.0.5",
     "typescript": "^4.0.5",
     "web-vitals": "^0.2.4"
+  },
+  "peerDependencies": {
+    "react": "^17.0.1",
+    "react-dom": "^17.0.1"
   },
   "scripts": {
     "start": "react-scripts start",
@@ -104,5 +106,12 @@
     "babel-loader": "^8.1.0",
     "react-is": "^16.13.1",
     "react-test-renderer": "^17.0.1"
+  },
+  "bit": {
+    "env": {
+      "compiler": "bit.envs/compilers/react-typescript@3.1.61"
+    },
+    "componentsDefaultDirectory": "components/{name}",
+    "packageManager": "npm"
   }
 }
